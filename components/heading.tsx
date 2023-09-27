@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Icon } from "lucide-react";
+import { icon as Icon } from "lucide-react";
 
 interface HeadingProps {
   title: string;
