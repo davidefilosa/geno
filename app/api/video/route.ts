@@ -1,14 +1,12 @@
 import { NextResponse } from "next/server";
 import Replicate from "replicate";
 
-const replicate = new Replicate({ auth: process.env.REPLICATE_API_TOKEN! });
+const replicate = new Replicate({ auth: process.env.REPLICATE_API_TOKEN });
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { prompt } = body;
-
-   
 
     if (!prompt) {
       return new NextResponse("Prompt is required", { status: 400 });
